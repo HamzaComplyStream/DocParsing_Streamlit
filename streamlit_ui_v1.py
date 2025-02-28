@@ -118,8 +118,8 @@ def bedrock_calling(system_prompt, prompt_type, pdf_text):
     """
     try:
         # AWS Configuration - get from Streamlit secrets or environment
-        aws_access_key = os.environ.get("AWS_ACCESS_KEY_ID") or st.secrets.get("AWS_ACCESS_KEY_ID", "")
-        aws_secret_key = os.environ.get("AWS_SECRET_ACCESS_KEY") or st.secrets.get("AWS_SECRET_ACCESS_KEY", "")
+        aws_access_key = os.environ.get("AWS_ACCESS_KEY_ID") or st.secrets.get("aws_access_key_id", "")
+        aws_secret_key = os.environ.get("AWS_SECRET_ACCESS_KEY") or st.secrets.get("aws_secret_access_key", "")
         
         session = boto3.Session(
             aws_access_key_id=aws_access_key,
