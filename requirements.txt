@@ -1,0 +1,5 @@
+streamlit
+pdfplumber
+boto3
+pandas
+
